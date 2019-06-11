@@ -39,7 +39,8 @@ public:
         cache.push_front(make_tuple(key,value));
         lookupTable[key] = cache.begin();
     }
-    
+
+private:
     int capacity;
     unordered_map<int, list<tuple<int, int>>::iterator> lookupTable;
     list<tuple<int, int>> cache;
